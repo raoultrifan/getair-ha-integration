@@ -1,0 +1,11 @@
+{
+  "domain": "getair",
+  "name": "getAir",
+  "version": "2.0.0",
+  "documentation": "https://github.com/getaireu/REST-API",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": [],
+  "iot_class": "cloud_polling",
+  "config_flow": true
+}
