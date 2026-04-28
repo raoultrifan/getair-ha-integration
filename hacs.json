@@ -1,0 +1,11 @@
+{
+  "name": "getAir Integration",
+  "description": "Home Assistant integration for getAir ComfortControl Pro BT ventilation systems",
+  "domains": ["fan", "sensor"],
+  "iot_class": "cloud_polling",
+  "homeassistant": "2023.1.0",
+  "documentations": "https://github.com/raoultrifan/getair-ha-integration",
+  "issue_tracker": "https://github.com/raoultrifan/getair-ha-integration/issues",
+  "codeowners": ["@raoultrifan"],
+  "render_readme": true
+}
