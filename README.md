@@ -2,8 +2,6 @@
 
 A custom Home Assistant integration for **getAir ComfortControl Pro BT and Smart Control Hub** mechanical heat-recovery ventilation systems, providing local-style cloud control via the getAir REST API (https://github.com/getaireu/REST-API).
 
-![Dashboard Preview](docs/dashboard-example.png)
-
 ---
 
 ## Features
@@ -59,9 +57,28 @@ A custom Home Assistant integration for **getAir ComfortControl Pro BT and Smart
 3. Enter your getAir account email and password
 4. The integration will automatically discover your device
 
+![Add getAir interation](/images/getAir_Integration.png)
+
+![Add getAir interation](/images/getAir_Integration_.png)
+
+![Add getAir interation](/images/getAir_DeviceInfo.jpg)
+
+![Add getAir interation](/images/getAir_Entities.png)
+
 ---
 
 ## Dashboard Cards
+
+**You can play with the dasboard as you like, based on what environmental sensors you've installed in the room / rooms. Below are some examples of dashboard I've used.**
+
+![Dashboard 1 Preview](/images/getAir_Dashboard_04.png)
+
+![Dashboard 2 Preview](/images/getAir_Dashboard_02.png)
+
+![Dashboard 3 Preview](/images/getAir_Dashboard_01.png)
+
+![Dashboard 4 Preview](/images/getAir_Dashboard_02.png)
+
 
 Three optional custom Lovelace cards are included in the `www/` folder:
 
