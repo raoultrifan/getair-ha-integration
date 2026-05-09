@@ -1,6 +1,8 @@
 """Sensor platform for getAir integration."""
 from __future__ import annotations
 
+from datetime import datetime, timezone
+
 from dataclasses import dataclass
 from typing import Any
 
@@ -73,8 +75,28 @@ SENSOR_DESCRIPTIONS: tuple[GetAirSensorEntityDescription, ...] = (
         service="zone",
         value_fn=lambda d: d["zone"].get("runtime"),
     ),
+    GetAirSensorEntityDescription(
+        key="iaq_accuracy",
+        name="IAQ Accuracy",
+        native_unit_of_measurement=None,
+        state_class=SensorStateClass.MEASUREMENT,
+        service="system",
+        value_fn=lambda d: d["system"].get("iaq-accuracy"),
+    ),
+    GetAirSensorEntityDescription(
+        key="boot_time",
+        name="Last Boot",
+        device_class=SensorDeviceClass.TIMESTAMP,
+        service="system",
+        value_fn=lambda d: datetime.fromtimestamp(d["system"].get("boot-time", 0), tz=timezone.utc),
+    ),
+    GetAirSensorEntityDescription(
+        key="notification",
+        name="Notification",
+        service="system",
+        value_fn=lambda d: d["system"].get("notification"),
+    ),
 )
-
 
 async def async_setup_entry(
     hass: HomeAssistant,
