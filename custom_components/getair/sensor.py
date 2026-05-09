@@ -57,7 +57,7 @@ SENSOR_DESCRIPTIONS: tuple[GetAirSensorEntityDescription, ...] = (
         native_unit_of_measurement="IAQ",
         state_class=SensorStateClass.MEASUREMENT,
         service="system",
-        value_fn=lambda d: d["system"].get("indoor-air-quality"),
+        value_fn=lambda d: round(float(d["system"].get("indoor-air-quality", 0)), 1),
     ),
     GetAirSensorEntityDescription(
         key="fan_speed",
