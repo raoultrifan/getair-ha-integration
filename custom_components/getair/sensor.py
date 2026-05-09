@@ -24,13 +24,11 @@ from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
 from .const import DOMAIN
 
-
 @dataclass
 class GetAirSensorEntityDescription(SensorEntityDescription):
     """Describes a getAir sensor."""
     service: str = "zone"
     value_fn: Any = None
-
 
 SENSOR_DESCRIPTIONS: tuple[GetAirSensorEntityDescription, ...] = (
     GetAirSensorEntityDescription(
